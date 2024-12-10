@@ -1,0 +1,36 @@
+CREATE TABLE person (
+person_code VARCHAR(20) NOT NULL,
+first_name VARCHAR(80) NOT NULL,
+last_name VARCHAR(80) NOT NULL,
+birth_date DATE NULL,
+age INT NULL
+);
+
+CREATE TABLE recipe (
+recipe_code VARCHAR(20) NOT NULL,
+recipe_name VARCHAR(80) NOT NULL,
+total_time decimal(5,2) NULL,
+serving_size VARCHAR(5) NULL,
+link VARCHAR(150) NULL
+);
+
+CREATE TABLE ingredient (
+ingredient_id INT NOT NULL,
+recipe_code VARCHAR(20) NOT NULL,
+food_code VARCHAR(20) NOT NULL,
+unit_quantity VARCHAR(80) NOT NULL
+);
+
+CREATE TABLE inventory (
+inventory_id INT NOT NULL,
+food_code VARCHAR(20) NOT NULL,
+food_quantity INT NOT NULL,
+inventory_status VARCHAR(20) NOT NULL,
+purchased_by VARCHAR(20) NULL,
+purchased_date DATE NOT NULL,
+expiration_date DATE NOT NULL,
+last_updated_date DATE NOT NULL,
+last_updated_by_code VARCHAR(20) NULL,
+last_updated_reason VARCHAR(20) NULL,
+last_recipe_code VARCHAR(20) NULL DEFAULT NULL
+);

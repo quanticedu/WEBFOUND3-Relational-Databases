@@ -1,0 +1,2 @@
+INSERT INTO inventory (inventory_id, food_code, food_quantity, inventory_status, purchased_by, purchased_date, expiration_date, last_updated_date, last_updated_by_code, last_updated_reason)
+VALUES (54, 'RABB', 8, 'added', 'DDULIK', '2023-01-28', '2024-01-28', '2023-01-28', 'DDULIK', 'shopping');
