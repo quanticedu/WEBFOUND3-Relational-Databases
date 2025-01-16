@@ -1,11 +1,4 @@
 ALTER TABLE inventory
-ADD CONSTRAINT "foreign_key_inventory_purchased_by"
-FOREIGN KEY (purchased_by)
-REFERENCES person (person_code)
-ON DELETE SET NULL
-ON UPDATE CASCADE;
-
-ALTER TABLE inventory
 ADD CONSTRAINT "foreign_key_inventory_food_code"
 FOREIGN KEY (food_code)
 REFERENCES food (food_code)
@@ -34,7 +27,7 @@ ON DELETE SET NULL
 ON UPDATE CASCADE;
 
 ALTER TABLE ingredient
-ADD CONSTRAINT "foreign_key_ingredient_recipe_code"
+ADD CONSTRAINT "foreign_key_ingredient_food_code"
 FOREIGN KEY (food_code)
 REFERENCES food (food_code)
 ON DELETE SET NULL
